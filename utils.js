@@ -238,8 +238,6 @@ function getModelViewMatrix() {
 
   const productMatrix = tmpMatrix4;
 
-  //console.log("NOT TRANSPOSE")
-  //console.log(productMatrix)
   return getTransposeMatrix(productMatrix);
 }
 
