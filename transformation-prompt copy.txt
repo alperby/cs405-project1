@@ -1,0 +1,7 @@
+I have a 3d cube object in my hand. I'm going to give you a 4x4 transformation for this cube:
+[0.1767766922712326, -0.3061862071122423, 0.3535533845424652, 0.30000001192092896, 0.4633883326744428, 0.0634132435040824, -0.1767766922712326, -0.25, 0.1268264870081648, 0.780330057776724, 0.6123724142244846, 0, 0, 0, 0, 1]
+Please animate the transformation I have provided you infinitely with a period of 10 seconds.
+For the first 5 seconds, the cube should transform from its initial position to the target position
+In the next 5 seconds, the cube should return to its initial position.
+I expect the output of the prompt to be a function with 1 paramater, startTime which should return the model view matrix at the given time, in JavaScript.
+I do not have access to mat4, but I have custom functions for multiplying matrices (multiplyMatrices(matrixA,matrixB)) and obtaining an identity matrix (createIdentityMatrix())
