@@ -232,13 +232,13 @@ function getModelViewMatrix() {
   rotateZMatrix = createRotationMatrix_Z(Math.PI / 3);
 
   let tmpMatrix = multiplyMatrices(translationMatrix, scalingMatrix);
-  let tmpMatrix2 = multiplyMatrices(tmpMatrix, rotateXMatrix);
+  let tmpMatrix2 = multiplyMatrices(tmpMatrix, rotateZMatrix);
   let tmpMatrix3 = multiplyMatrices(tmpMatrix2, rotateYMatrix);
-  let tmpMatrix4 = multiplyMatrices(tmpMatrix3, rotateZMatrix);
+  let tmpMatrix4 = multiplyMatrices(tmpMatrix3, rotateXMatrix);
 
   const productMatrix = tmpMatrix4;
-
-  return getTransposeMatrix(productMatrix);
+  
+  return productMatrix;
 }
 
 /**
